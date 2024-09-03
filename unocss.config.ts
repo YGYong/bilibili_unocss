@@ -1,8 +1,10 @@
 // uno.config.ts
 import { defineConfig } from 'unocss'
+import transformerDirectives from '@unocss/transformer-directives'
 
 export default defineConfig({
   // ...UnoCSS options
+  transformers: [transformerDirectives({ enforce: 'pre' })],
   rules: [['m-1', { margin: '0.25rem' }]],
   shortcuts: {
     // 快捷方式到多个实用程序
