@@ -7,8 +7,9 @@
       muted
       loop
     ></video>
-    <div class="flex flex-nowrap px-2 pt-2 h-[40px]">
-      <div class="common_banner w-[40%]">
+    <div class="flex flex-nowrap px-2 pt-4">
+      <div class="common_banner w-[38%] mr-6">
+        <span class="animate__animated animate__bounce animate__infinite animate-duration-1.5s text-[20px]">YGYong</span>
         <div v-for="item in sideContent" :key="item.id">
           <el-icon v-if="item.icon" class="mr-1 align-middle"><Download /></el-icon>
           <span>{{ item.title }}</span>
@@ -21,7 +22,7 @@
         size="small"
         class="flex-1 opacity-70"
       />
-      <div class="common_banner w-[35%]">
+      <div class="common_banner w-[33%] ml-6">
         <el-avatar :src="avatar" />
         <div v-for="item in rightContent" :key="item.id" class="flex flex-col items-center">
           <!-- <el-icon>< item.icon /></el-icon> -->
@@ -56,7 +57,8 @@ const sideContent = [
   { id: '5', title: '会员购', path: '/memberPurchase' },
   { id: '6', title: '漫画', path: '/caricature' },
   { id: '7', title: '赛事', path: '/competition' },
-  { id: '8', title: '下载客户端', icon: '<el-icon><Download /></el-icon>', path: '/downloadClient' }
+  // { id: '8', title: '', path: '/ygyong' },
+  { id: '9', title: '下载客户端', icon: '<el-icon><Download /></el-icon>', path: '/downloadClient' }
 ]
 // 右侧功能
 const rightContent = [
@@ -72,6 +74,6 @@ const rightContent = [
 
 <style lang="scss" scoped>
 .common_banner {
-  @apply "flex justify-between items-center flex-shrink-0 text-white mx-2";
+  @apply "flex justify-between items-center flex-shrink-0 text-white";
 }
 </style>
